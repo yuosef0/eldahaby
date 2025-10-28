@@ -9,7 +9,7 @@ export default function Cart() {
 
   return (
     <div className="cart-container">
-      <h1 className="cart-title">🛍️ سلتك</h1>
+      <h1 className="cart-title">🛍️ Cart</h1>
       <div className="cart-list">
         {cart.map((item) => (
           <div key={item.id} className="cart-item">
