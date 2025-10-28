@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { getProducts } from "../services/api";
 import ProductCard from "../components/ProductCard";
 import CustomCarousel from "../components/CustomCarousel";
+import ProductsList from "../components/ProductList";
 export default function Home() {
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,8 @@ export default function Home() {
       {products.map((p) => (
         <ProductCard key={p.id} product={p} />
       ))}
+      <ProductsList products={products} />
+
     </div>
   );
 }
